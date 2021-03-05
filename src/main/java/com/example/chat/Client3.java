@@ -24,7 +24,7 @@ public class Client3 extends JFrame implements ActionListener {
     public Client3(String uname,String servername) throws Exception {
         super(uname);
         this.username = uname;
-        chatusers  = new Socket(servername,3306);
+        chatusers  = new Socket(servername,8082);
         br = new BufferedReader( new InputStreamReader( chatusers.getInputStream()) ) ;
         pw = new PrintWriter(chatusers.getOutputStream(),true);
         pw.println(uname);
